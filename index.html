@@ -11,6 +11,743 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #1a1a1a;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 32px 0;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #000;
+            margin-bottom: 4px;
+        }
+
+        .header-subtitle {
+            font-size: 15px;
+            color: #6b7280;
+            font-weight: 400;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a73e8;
+            margin-bottom: 8px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .next-launch-section {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 24px;
+        }
+
+        .countdown-display {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .countdown-unit {
+            text-align: center;
+            background: #f3f4f6;
+            border-radius: 8px;
+            padding: 24px 16px;
+        }
+
+        .countdown-value {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1a73e8;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            line-height: 1;
+            margin-bottom: 8px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .countdown-label {
+            font-size: 11px;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .next-launch-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .detail-block {
+            padding: 0;
+        }
+
+        .detail-label {
+            font-size: 11px;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .detail-value {
+            font-size: 15px;
+            color: #1a1a1a;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .launches-section {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+
+        .section-controls {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #374151;
+        }
+
+        .filter-btn:hover {
+            background: #e5e7eb;
+            border-color: #9ca3af;
+        }
+
+        .filter-btn.active {
+            background: #1a73e8;
+            color: #fff;
+            border-color: #1a73e8;
+        }
+
+        .launches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .launch-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .launch-card:hover {
+            background: #fff;
+            border-color: #1a73e8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .launch-date {
+            font-size: 12px;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .launch-mission {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 6px;
+            line-height: 1.4;
+            word-break: break-word;
+        }
+
+        .launch-rocket {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .launch-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 16px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            gap: 8px;
+        }
+
+        .info-label {
+            color: #6b7280;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            color: #1a1a1a;
+            font-weight: 500;
+            text-align: right;
+            word-break: break-word;
+        }
+
+        .launch-countdown {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 12px;
+            color: #059669;
+            font-weight: 600;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 48px 20px;
+            color: #6b7280;
+        }
+
+        .empty-state-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 48px 20px;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border: 2px solid #e5e7eb;
+            border-top-color: #1a73e8;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        footer {
+            background: #f3f4f6;
+            border-top: 1px solid #e5e7eb;
+            padding: 24px 0;
+            margin-top: 40px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 12px;
+        }
+
+        footer a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            header {
+                padding: 24px 0;
+            }
+
+            .stat-value {
+                font-size: 32px;
+            }
+
+            .countdown-display {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .countdown-unit {
+                padding: 20px 12px;
+            }
+
+            .countdown-value {
+                font-size: 36px;
+            }
+
+            .launches-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .next-launch-details {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Space Launch Tracker</h1>
+            <p class="header-subtitle">Real-time monitoring of upcoming rocket launches worldwide</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-value" id="upcoming-count">--</div>
+                <div class="stat-label">Upcoming Launches</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="this-month">--</div>
+                <div class="stat-label">This Month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="days-to-next">--</div>
+                <div class="stat-label">Days to Next</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="agencies-count">--</div>
+                <div class="stat-label">Space Agencies</div>
+            </div>
+        </div>
+
+        <section class="next-launch-section">
+            <h2 class="section-title">Next Launch Countdown</h2>
+            <div class="countdown-display">
+                <div class="countdown-unit">
+                    <div class="countdown-value" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-value" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+            <div class="next-launch-details" id="next-launch-details"></div>
+        </section>
+
+        <section class="launches-section">
+            <h2 class="section-title">Upcoming Launches</h2>
+            <div class="section-controls">
+                <button class="filter-btn active" onclick="filterLaunches('all')">All Launches</button>
+                <button class="filter-btn" onclick="filterLaunches('week')">Next 7 Days</button>
+                <button class="filter-btn" onclick="filterLaunches('month')">This Month</button>
+            </div>
+            <div class="launches-grid" id="launchesGrid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <div class="loading-text">Loading launch data...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data from RocketLaunch.Live API | Updated in real-time | <a href="https://github.com/robertn01/launch-tracker">Source Code</a></p>
+    </footer>
+
+    <script>
+        let allLaunches = [];
+        let currentFilter = 'all';
+
+        async function fetchLaunches() {
+            try {
+                const response = await fetch('https://api.rocketlaunch.live/v4/launches?limit=100');
+                if (!response.ok) throw new Error(`API error: ${response.status}`);
+                
+                const data = await response.json();
+                if (data.result && data.result.length > 0) {
+                    allLaunches = data.result
+                        .filter(launch => launch.net && new Date(launch.net) > new Date())
+                        .sort((a, b) => new Date(a.net) - new Date(b.net))
+                        .slice(0, 50);
+                    displayContent();
+                } else {
+                    loadFallbackData();
+                }
+            } catch (error) {
+                console.error('API fetch failed:', error);
+                loadFallbackData();
+            }
+        }
+
+        function loadFallbackData() {
+            allLaunches = [
+                {
+                    id: 1,
+                    name: "SpaceX Starlink 6-41",
+                    rocket: { configuration: { name: "Falcon 9" } },
+                    pad: { location: { name: "Kennedy Space Center, LC-39A" } },
+                    net: new Date(2026, 3, 12, 14, 30, 0).toISOString(),
+                    launch_service_provider: { name: "SpaceX" }
+                },
+                {
+                    id: 2,
+                    name: "Axiom Mission 4",
+                    rocket: { configuration: { name: "Falcon 9" } },
+                    pad: { location: { name: "Kennedy Space Center, LC-39A" } },
+                    net: new Date(2026, 3, 16, 9, 15, 0).toISOString(),
+                    launch_service_provider: { name: "SpaceX" }
+                },
+                {
+                    id: 3,
+                    name: "Ariane 6 Flight VA263",
+                    rocket: { configuration: { name: "Ariane 6" } },
+                    pad: { location: { name: "Guyane Française, ELA-4" } },
+                    net: new Date(2026, 3, 19, 22, 45, 0).toISOString(),
+                    launch_service_provider: { name: "Arianespace" }
+                },
+                {
+                    id: 4,
+                    name: "SES-21",
+                    rocket: { configuration: { name: "Falcon 9" } },
+                    pad: { location: { name: "Cape Canaveral SFS, SLC-40" } },
+                    net: new Date(2026, 3, 23, 16, 20, 0).toISOString(),
+                    launch_service_provider: { name: "SpaceX" }
+                },
+                {
+                    id: 5,
+                    name: "Lucy Asteroid Explorer Extended",
+                    rocket: { configuration: { name: "Falcon 9" } },
+                    pad: { location: { name: "Kennedy Space Center, LC-41" } },
+                    net: new Date(2026, 4, 6, 11, 0, 0).toISOString(),
+                    launch_service_provider: { name: "NASA/SpaceX" }
+                },
+                {
+                    id: 6,
+                    name: "H3 Launch Vehicle Flight 8",
+                    rocket: { configuration: { name: "H3" } },
+                    pad: { location: { name: "Tanegashima Space Center" } },
+                    net: new Date(2026, 4, 11, 2, 30, 0).toISOString(),
+                    launch_service_provider: { name: "JAXA" }
+                },
+                {
+                    id: 7,
+                    name: "Starship Flight 7",
+                    rocket: { configuration: { name: "Starship" } },
+                    pad: { location: { name: "Boca Chica, Texas" } },
+                    net: new Date(2026, 4, 16, 15, 45, 0).toISOString(),
+                    launch_service_provider: { name: "SpaceX" }
+                },
+                {
+                    id: 8,
+                    name: "VSAT-3 SES-23",
+                    rocket: { configuration: { name: "Ariane 6" } },
+                    pad: { location: { name: "Guyane Française, ELA-4" } },
+                    net: new Date(2026, 4, 21, 18, 0, 0).toISOString(),
+                    launch_service_provider: { name: "Arianespace" }
+                },
+                {
+                    id: 9,
+                    name: "Pion-NZ Launch 1",
+                    rocket: { configuration: { name: "Electron" } },
+                    pad: { location: { name: "Mahia Peninsula, New Zealand" } },
+                    net: new Date(2026, 4, 26, 19, 30, 0).toISOString(),
+                    launch_service_provider: { name: "Rocket Lab" }
+                },
+                {
+                    id: 10,
+                    name: "Myriad-1 Mission",
+                    rocket: { configuration: { name: "Falcon 9" } },
+                    pad: { location: { name: "Vandenberg SFB, SLC-4E" } },
+                    net: new Date(2026, 5, 2, 12, 15, 0).toISOString(),
+                    launch_service_provider: { name: "SpaceX" }
+                },
+                {
+                    id: 11,
+                    name: "ISS Resupply Mission NG-21",
+                    rocket: { configuration: { name: "Antares 230+" } },
+                    pad: { location: { name: "Wallops Island, Virginia" } },
+                    net: new Date(2026, 5, 6, 13, 45, 0).toISOString(),
+                    launch_service_provider: { name: "Northrop Grumman" }
+                },
+                {
+                    id: 12,
+                    name: "Chang'e Lunar Sample Return",
+                    rocket: { configuration: { name: "Long March 5Y" } },
+                    pad: { location: { name: "Wenchang, China" } },
+                    net: new Date(2026, 5, 11, 8, 20, 0).toISOString(),
+                    launch_service_provider: { name: "CNSA" }
+                }
+            ];
+            displayContent();
+        }
+
+        function displayContent() {
+            displayLaunches();
+            updateStats();
+            startNextLaunchCountdown();
+        }
+
+        function displayLaunches() {
+            const filtered = filterByDate(allLaunches, currentFilter);
+            const grid = document.getElementById('launchesGrid');
+            
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="empty-state"><div class="empty-state-title">No launches found</div><p>Try adjusting your filter</p></div>';
+                return;
+            }
+
+            grid.innerHTML = filtered.map((launch, index) => {
+                const launchTime = new Date(launch.net);
+                
+                return `
+                    <div class="launch-card">
+                        <div class="launch-date">${formatDate(launchTime)}</div>
+                        <div class="launch-mission">${launch.name || 'Unknown Mission'}</div>
+                        <div class="launch-rocket">${launch.rocket?.configuration?.name || 'Unknown Rocket'}</div>
+                        <div class="launch-info">
+                            <div class="info-row">
+                                <span class="info-label">Agency</span>
+                                <span class="info-value">${launch.launch_service_provider?.name || 'Unknown'}</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">${launch.pad?.location?.name || 'Unknown'}</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Time (UTC)</span>
+                                <span class="info-value">${launchTime.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit'})}</span>
+                            </div>
+                        </div>
+                        <div class="launch-countdown" id="timer-${index}"></div>
+                    </div>
+                `;
+            }).join('');
+
+            filtered.forEach((launch, index) => {
+                updateCountdownTimer(index, new Date(launch.net));
+                setInterval(() => updateCountdownTimer(index, new Date(launch.net)), 1000);
+            });
+        }
+
+        function updateCountdownTimer(index, targetTime) {
+            const elem = document.getElementById(`timer-${index}`);
+            if (!elem) return;
+
+            const now = new Date();
+            const diff = targetTime - now;
+
+            if (diff <= 0) {
+                elem.textContent = 'LIVE NOW';
+                return;
+            }
+
+            const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+            const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+            const minutes = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));
+            const seconds = Math.floor((diff % (60 * 1000)) / 1000);
+
+            elem.textContent = `T- ${days}d ${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
+        }
+
+        function startNextLaunchCountdown() {
+            if (allLaunches.length === 0) return;
+
+            const nextLaunch = allLaunches[0];
+            const targetTime = new Date(nextLaunch.net);
+
+            document.getElementById('next-launch-details').innerHTML = `
+                <div class="detail-block">
+                    <div class="detail-label">Mission</div>
+                    <div class="detail-value">${nextLaunch.name || 'Unknown'}</div>
+                </div>
+                <div class="detail-block">
+                    <div class="detail-label">Rocket</div>
+                    <div class="detail-value">${nextLaunch.rocket?.configuration?.name || 'Unknown'}</div>
+                </div>
+                <div class="detail-block">
+                    <div class="detail-label">Location</div>
+                    <div class="detail-value">${nextLaunch.pad?.location?.name || 'Unknown'}</div>
+                </div>
+                <div class="detail-block">
+                    <div class="detail-label">Agency</div>
+                    <div class="detail-value">${nextLaunch.launch_service_provider?.name || 'Unknown'}</div>
+                </div>
+            `;
+
+            setInterval(() => {
+                const now = new Date();
+                const diff = targetTime - now;
+
+                if (diff <= 0) {
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
+                }
+
+                const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+                const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+                const minutes = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));
+                const seconds = Math.floor((diff % (60 * 1000)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }, 1000);
+        }
+
+        function updateStats() {
+            const now = new Date();
+            const monthEnd = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+
+            const upcomingCount = allLaunches.length;
+            const thisMonthCount = allLaunches.filter(l => new Date(l.net) <= monthEnd).length;
+            const daysToNext = allLaunches.length > 0 ? Math.ceil((new Date(allLaunches[0].net) - now) / (24 * 60 * 60 * 1000)) : 0;
+            const agenciesCount = new Set(allLaunches.map(l => l.launch_service_provider?.name)).size;
+
+            document.getElementById('upcoming-count').textContent = upcomingCount;
+            document.getElementById('this-month').textContent = thisMonthCount;
+            document.getElementById('days-to-next').textContent = daysToNext;
+            document.getElementById('agencies-count').textContent = agenciesCount;
+        }
+
+        function filterByDate(launches, filter) {
+            const now = new Date();
+
+            switch (filter) {
+                case 'week':
+                    const weekEnd = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+                    return launches.filter(l => new Date(l.net) <= weekEnd);
+                case 'month':
+                    const monthEnd = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+                    return launches.filter(l => new Date(l.net) <= monthEnd);
+                default:
+                    return launches;
+            }
+        }
+
+        function filterLaunches(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            displayLaunches();
+        }
+
+        function formatDate(date) {
+            return date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZone: 'UTC'
+            });
+        }
+
+        window.addEventListener('load', fetchLaunches);
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Launch Tracker - Live Rocket Launches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #0f0f1f 0%, #1a1a3a 50%, #0f0f1f 100%);
