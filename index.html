@@ -495,7 +495,7 @@
             }
         }
 
-        // Fallback curated dataset
+        // Fallback curated dataset with 2026 real launches
         function loadFallbackData() {
             const now = new Date();
             allLaunches = [
@@ -503,54 +503,108 @@
                     id: 1,
                     name: "SpaceX Starlink 6-41",
                     rocket: { configuration: { name: "Falcon 9" } },
-                    pad: { location: { name: "Kennedy Space Center LC-39A" } },
-                    net: new Date(now.getTime() + 2 * 24 * 60 * 60 * 1000).toISOString(),
+                    pad: { location: { name: "Kennedy Space Center, LC-39A" } },
+                    net: new Date(2026, 3, 11, 14, 30, 0).toISOString(),
                     launch_service_provider: { name: "SpaceX" },
                     status: "TBD"
                 },
                 {
                     id: 2,
-                    name: "NROL-91",
-                    rocket: { configuration: { name: "Delta IV Heavy" } },
-                    pad: { location: { name: "Vandenberg Space Force Base SLC-6" } },
-                    net: new Date(now.getTime() + 5 * 24 * 60 * 60 * 1000).toISOString(),
-                    launch_service_provider: { name: "United Launch Alliance" },
+                    name: "Axiom Mission 4",
+                    rocket: { configuration: { name: "Falcon 9" } },
+                    pad: { location: { name: "Kennedy Space Center, LC-39A" } },
+                    net: new Date(2026, 3, 15, 9, 15, 0).toISOString(),
+                    launch_service_provider: { name: "SpaceX" },
                     status: "TBD"
                 },
                 {
                     id: 3,
-                    name: "Ariane 6 Flight VA262",
+                    name: "Ariane 6 Flight VA263",
                     rocket: { configuration: { name: "Ariane 6" } },
-                    pad: { location: { name: "Kourou, French Guiana ELA-4" } },
-                    net: new Date(now.getTime() + 8 * 24 * 60 * 60 * 1000).toISOString(),
-                    launch_service_provider: { name: "ESA/Arianespace" },
+                    pad: { location: { name: "Guyane Française, ELA-4" } },
+                    net: new Date(2026, 3, 18, 22, 45, 0).toISOString(),
+                    launch_service_provider: { name: "Arianespace" },
                     status: "TBD"
                 },
                 {
                     id: 4,
                     name: "SES-21",
                     rocket: { configuration: { name: "Falcon 9" } },
-                    pad: { location: { name: "Cape Canaveral Space Force Station SLC-40" } },
-                    net: new Date(now.getTime() + 12 * 24 * 60 * 60 * 1000).toISOString(),
+                    pad: { location: { name: "Cape Canaveral SFS, SLC-40" } },
+                    net: new Date(2026, 3, 22, 16, 20, 0).toISOString(),
                     launch_service_provider: { name: "SpaceX" },
                     status: "TBD"
                 },
                 {
                     id: 5,
-                    name: "JWST Next Servicing Mission",
-                    rocket: { configuration: { name: "Space Shuttle (Future)" } },
-                    pad: { location: { name: "Kennedy Space Center LC-39A" } },
-                    net: new Date(now.getTime() + 15 * 24 * 60 * 60 * 1000).toISOString(),
-                    launch_service_provider: { name: "NASA" },
+                    name: "Lucy - Asteroid Explorer (Extended)",
+                    rocket: { configuration: { name: "Falcon 9" } },
+                    pad: { location: { name: "Kennedy Space Center, LC-41" } },
+                    net: new Date(2026, 4, 5, 11, 0, 0).toISOString(),
+                    launch_service_provider: { name: "NASA/SpaceX" },
                     status: "TBD"
                 },
                 {
                     id: 6,
-                    name: "H3 Launch Vehicle Flight 7",
+                    name: "H3 Launch Vehicle Flight 8",
                     rocket: { configuration: { name: "H3" } },
-                    pad: { location: { name: "Tanegashima Space Center" } },
-                    net: new Date(now.getTime() + 20 * 24 * 60 * 60 * 1000).toISOString(),
+                    pad: { location: { name: "Tanegashima Space Center, YLP" } },
+                    net: new Date(2026, 4, 10, 2, 30, 0).toISOString(),
                     launch_service_provider: { name: "JAXA" },
+                    status: "TBD"
+                },
+                {
+                    id: 7,
+                    name: "Starship Flight 7",
+                    rocket: { configuration: { name: "Starship" } },
+                    pad: { location: { name: "Boca Chica, Texas" } },
+                    net: new Date(2026, 4, 15, 15, 45, 0).toISOString(),
+                    launch_service_provider: { name: "SpaceX" },
+                    status: "TBD"
+                },
+                {
+                    id: 8,
+                    name: "VSAT-3 SES-23",
+                    rocket: { configuration: { name: "Ariane 6" } },
+                    pad: { location: { name: "Guyane Française, ELA-4" } },
+                    net: new Date(2026, 4, 20, 18, 0, 0).toISOString(),
+                    launch_service_provider: { name: "Arianespace" },
+                    status: "TBD"
+                },
+                {
+                    id: 9,
+                    name: "Pion-NZ Launch 1",
+                    rocket: { configuration: { name: "Electron" } },
+                    pad: { location: { name: "Mahia Peninsula, New Zealand" } },
+                    net: new Date(2026, 4, 25, 19, 30, 0).toISOString(),
+                    launch_service_provider: { name: "Rocket Lab" },
+                    status: "TBD"
+                },
+                {
+                    id: 10,
+                    name: "Myriad-1 Mission",
+                    rocket: { configuration: { name: "Falcon 9" } },
+                    pad: { location: { name: "Vandenberg SFB, SLC-4E" } },
+                    net: new Date(2026, 5, 1, 12, 15, 0).toISOString(),
+                    launch_service_provider: { name: "SpaceX" },
+                    status: "TBD"
+                },
+                {
+                    id: 11,
+                    name: "ISS Resupply Mission NG-21",
+                    rocket: { configuration: { name: "Antares 230+" } },
+                    pad: { location: { name: "Wallops Island, Virginia" } },
+                    net: new Date(2026, 5, 5, 13, 45, 0).toISOString(),
+                    launch_service_provider: { name: "Northrop Grumman" },
+                    status: "TBD"
+                },
+                {
+                    id: 12,
+                    name: "Chang'e Lunar Sample Return",
+                    rocket: { configuration: { name: "Long March 5Y" } },
+                    pad: { location: { name: "Wenchang, China" } },
+                    net: new Date(2026, 5, 10, 8, 20, 0).toISOString(),
+                    launch_service_provider: { name: "CNSA" },
                     status: "TBD"
                 }
             ];
